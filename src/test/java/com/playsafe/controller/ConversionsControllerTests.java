@@ -32,4 +32,9 @@ public class ConversionsControllerTests {
         assertEquals(temperature, 310);
     }
 
+    @Test
+    public void testConvertMilesToKilometers(){
+        
+    }
+
 }
