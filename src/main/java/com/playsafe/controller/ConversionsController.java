@@ -1,5 +1,6 @@
 package com.playsafe.controller;
 
+import com.playsafe.dto.DistanceDto;
 import com.playsafe.dto.TemperatureDto;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,12 @@ public class ConversionsController {
     public TemperatureDto celsiusToKelvin(@PathVariable(value = "temperatureInCelsius") String temperatureInCelsius) {
         double temperature = celsiusToKelvin(Double.parseDouble(temperatureInCelsius));
         return new TemperatureDto(temperature);
+    }
+
+    @PostMapping(path = "/mtok/{distanceInMiles}")
+    public DistanceDto milesToKilometers(@PathVariable(value = "distanceInMiles") String distanceInMiles) {
+        double distance = milesToKilometers(Double.parseDouble(distanceInMiles));
+        return new DistanceDto(distance);
     }
 
     /**
