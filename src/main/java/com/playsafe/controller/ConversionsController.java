@@ -23,8 +23,18 @@ public class ConversionsController {
      * @param temperaturInKelvin
      * @return double
      */
-    public static double kelvinToCelsius(double temperaturInKelvin) {
-        return temperaturInKelvin - 273.0;
+    public double kelvinToCelsius(double temperaturInKelvin) {
+        return temperaturInKelvin - 273;
+    }
+
+    /**
+     * convert temperature from Celsius to Kelvin
+     * 
+     * @param temperaturInCelsius
+     * @return double
+     */
+    public double celsiusToKelvin(double temperaturInCelsius) {
+        return temperaturInCelsius + 273;
     }
 
 }
