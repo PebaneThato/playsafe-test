@@ -30,6 +30,12 @@ public class ConversionsController {
         return new DistanceDto(distance);
     }
 
+    @PostMapping(path = "/ktom/{distanceInKilometers}")
+    public DistanceDto kilometersToMiles(@PathVariable(value = "distanceInKilometers") String distanceInKilometers) {
+        double distance = kilometersToMiles(Double.parseDouble(distanceInKilometers));
+        return new DistanceDto(distance);
+    }
+
     /**
      * convert temperature from Kelvin to Celsius
      * 
