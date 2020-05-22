@@ -12,13 +12,14 @@ public class ConversionsControllerTests {
 
     @Autowired
     private ConversionsController conversionsController;
-    private static double temperaturInKelvin, temperaturInCelsius, distanceInMiles;
+    private static double temperaturInKelvin, temperaturInCelsius, distanceInMiles, distanceInKilometers;
 
     @BeforeAll
     public static void initTestData(){
         temperaturInKelvin = 37;
         temperaturInCelsius = 235;
         distanceInMiles = 987;
+        distanceInKilometers = 100;
     }
     
     @Test
@@ -39,4 +40,9 @@ public class ConversionsControllerTests {
         assertEquals(distance, 1588.41858);
     }
 
+    @Test
+    public void testConvertKilometersToMiles(){
+        double distance = conversionsController.kilometersToMiles(distanceInKilometers);
+        assertEquals(distance, 1588.41858);
+    }
 }
