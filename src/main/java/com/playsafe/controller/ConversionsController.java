@@ -43,4 +43,14 @@ public class ConversionsController {
         return temperaturInCelsius + 273;
     }
 
+    /**
+     * Convert miles into kilometers
+     * 
+     * @param distanceInMiles
+     * @return double
+     */
+    public double milesToKilometers(double distanceInMiles) {
+        return distanceInMiles * 1.60934;
+    }
+
 }
