@@ -43,6 +43,6 @@ public class ConversionsControllerTests {
     @Test
     public void testConvertKilometersToMiles(){
         double distance = conversionsController.kilometersToMiles(distanceInKilometers);
-        assertEquals(distance, 1588.41858);
+        assertEquals(distance, 62.137100000000004);
     }
 }

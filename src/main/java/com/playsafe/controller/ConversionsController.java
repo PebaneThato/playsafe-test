@@ -60,4 +60,14 @@ public class ConversionsController {
         return distanceInMiles * 1.60934;
     }
 
+    /**
+     * Convert kilometers to miles
+     * 
+     * @param distanceInKilometers
+     * @return double
+     */
+    public double kilometersToMiles(double distanceInKilometers) {
+        return distanceInKilometers * 0.621371;
+    }
+
 }
