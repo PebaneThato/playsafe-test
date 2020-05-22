@@ -17,6 +17,12 @@ public class ConversionsController {
         return new TemperatureDto(temperature);
     }
 
+    @PostMapping(path = "/ctok/{temperatureInCelsius}")
+    public TemperatureDto celsiusToKelvin(@PathVariable(value = "temperatureInCelsius") String temperatureInCelsius) {
+        double temperature = celsiusToKelvin(Double.parseDouble(temperatureInCelsius));
+        return new TemperatureDto(temperature);
+    }
+
     /**
      * convert temperature from Kelvin to Celsius
      * 
